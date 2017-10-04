@@ -82,7 +82,7 @@ class ESentryLogRoute extends CLogRoute
 
         $client = $this->getRavenClient();
 
-        if ($client) {
+        if ($client) {            var_dump($logs);
             foreach ($logs AS $log) {
                 $client->captureMessage(
                     $log[0],
